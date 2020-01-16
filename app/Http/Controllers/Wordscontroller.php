@@ -3,10 +3,11 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
-class Wordscontroller extends Controller
+use App\Word;
+class WordsController extends Controller
 {
     public function index(){
-        return "test";
+        $words = Word::latest()->get();
+        return view('words.index')->with('words', $words);
     }
 }
