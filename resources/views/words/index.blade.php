@@ -9,9 +9,9 @@
   <div class="container">
     <h1>Mywords</h1>
     <ul>
-      @foreach($word as $word)
+      @foreach($words as $word)
       <li>
-        <a href="">{{ $word->en }}</a>
+        <a href="{{ action('WordsController@show', $word->id )}}">{{ $word->en }}</a>
         <a href="">{{ $word->ja }}</a>
       </li>
       @endforeach
