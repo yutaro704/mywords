@@ -11,8 +11,7 @@ class WordsController extends Controller
         return view('words.index')->with('words', $words);
     }
 
-    public function show($id){
-        $word = Word::findOrFail($id);
+    public function show(Word $word){
         return view('words.show')->with('word', $word);
     }
 }

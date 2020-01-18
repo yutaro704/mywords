@@ -12,4 +12,4 @@
 */
 
 Route::get('/', 'Wordscontroller@index');
-Route::get('/words/{id}', 'WordsController@show');
+Route::get('/words/{word}', 'WordsController@show');
