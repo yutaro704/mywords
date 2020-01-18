@@ -9,7 +9,7 @@
   <div class="container">
     <h1>Mywords</h1>
     <ul>
-      @foreach($words as $word)
+      @foreach($word as $word)
       <li>
         <a href="">{{ $word->en }}</a>
         <a href="">{{ $word->ja }}</a>
