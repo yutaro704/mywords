@@ -11,7 +11,7 @@
     <ul>
       @foreach($words as $word)
       <li>
-        <a href="">{{ $word->en }}</a>
+        <a href="{{ action('WordsController@show', $word )}}">{{ $word->en }}</a>
         <a href="">{{ $word->ja }}</a>
       </li>
       @endforeach

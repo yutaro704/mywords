@@ -12,3 +12,4 @@
 */
 
 Route::get('/', 'Wordscontroller@index');
+Route::get('/words/{word}', 'WordsController@show');

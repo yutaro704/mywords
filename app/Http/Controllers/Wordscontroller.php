@@ -10,4 +10,8 @@ class WordsController extends Controller
         $words = Word::latest()->get();
         return view('words.index')->with('words', $words);
     }
+
+    public function show(Word $word){
+        return view('words.show')->with('word', $word);
+    }
 }
