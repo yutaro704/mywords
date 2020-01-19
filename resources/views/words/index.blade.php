@@ -1,13 +1,7 @@
-<!DOCTYPE html>
-<html lang='ja'>
-<head>
-  <meta charset="utf-8">
-  <title>Myword</title>
-  <link rel="stylesheet" href="/css/styles.css">
-</head>
-<body>
-  <div class="container">
-    <h1>Mywords</h1>
+@extends('layouts.default')
+@section('title', 'Myword')
+@section('content')
+<h1>Mywords</h1>
     <ul>
       @foreach($words as $word)
       <li>
@@ -16,6 +10,4 @@
       </li>
       @endforeach
     </ul>
-  </div>
-</body>
-</html>
+@endsection
