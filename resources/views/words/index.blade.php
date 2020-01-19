@@ -1,7 +1,10 @@
 @extends('layouts.default')
 @section('title', 'Myword')
 @section('content')
-<h1>Mywords</h1>
+<h1>
+  Mywords
+  <a href="{{url('/')}}", class="header-menu" >New Word</a>
+</h1>
     <ul>
       @foreach($words as $word)
       <li>

@@ -1,5 +1,9 @@
 @extends('layouts.default')
 @section('title', 'Myword')
 @section('content')
-<h1>{{ $word->en }}</h1>
+
+<h1>
+  {{ $word->en }}
+  <a href="{{url('/')}}", class="header-menu" >Back</a>
+</h1>
 @endsection

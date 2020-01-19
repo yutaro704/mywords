@@ -12,4 +12,4 @@
 */
 
 Route::get('/', 'Wordscontroller@index');
-Route::get('/words/{word}', 'WordsController@show');
+Route::get('/words/{word}', 'WordsController@show')->where('word','[0-9]+');
