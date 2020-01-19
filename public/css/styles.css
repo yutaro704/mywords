@@ -24,3 +24,8 @@ ul > li {
   float: right;
 }
 
+input[type="text"]{
+  box-sizing: border-box;
+  width:400px;
+  padding:5px;
+}
