@@ -1,4 +1,4 @@
-@extends('layouts.default')
+@extends('layouts.app')
 @section('title', 'New word')
 @section('content')
 <h1>
