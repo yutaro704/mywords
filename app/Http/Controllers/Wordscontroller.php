@@ -14,4 +14,16 @@ class WordsController extends Controller
     public function show(Word $word){
         return view('words.show')->with('word', $word);
     }
+
+    public function create(){
+        return view('words.create');
+    }
+
+    public function store(Request $request) {
+        $word = new Word();
+        $word->en = $request->en;
+        $word->ja = $request->ja;
+        $word->save();
+        return redirect('/');
+    }
 }

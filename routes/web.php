@@ -13,3 +13,5 @@
 
 Route::get('/', 'Wordscontroller@index');
 Route::get('/words/{word}', 'WordsController@show')->where('word','[0-9]+');
+Route::get('/words/create', 'WordsController@create');
+Route::post('/words', 'WordsController@store');
