@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Auth;
 use App\Word;
+
 class WordsController extends Controller
 {
     public function index(){
@@ -23,6 +25,7 @@ class WordsController extends Controller
         $word = new Word();
         $word->en = $request->en;
         $word->ja = $request->ja;
+        $word->user_id = auth()->id();
         $word->save();
         return redirect('/');
     }
