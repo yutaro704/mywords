@@ -3,9 +3,9 @@
 @section('content')
 <h1>
   New word
-  <a href="{{url('/')}}", class="header-menu" >Back</a>
+  <a href="{{url('/')}}" class="header-menu" >Back</a>
 </h1>
-<form method='post', action="{{ url('/words') }}">
+<form method='post' action="{{ url('/words') }}">
   {{ csrf_field() }}
   <p>
     <input type="text" name="en" placeholder="enter english">
