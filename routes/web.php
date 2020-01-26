@@ -17,6 +17,7 @@ Route::get('/words/create', 'WordsController@create');
 Route::post('/words', 'WordsController@store');
 Route::get('/words/{word}/edit', 'WordsController@edit');
 Route::patch('/words/{word}', 'WordsController@update');
+Route::delete('/words/{word}', 'WordsController@destroy');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
