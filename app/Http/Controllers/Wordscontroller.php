@@ -40,4 +40,9 @@ class WordsController extends Controller
         $word->save();
         return redirect('/');
     }
+
+    public function destroy(Word $word){
+        $word->delete();
+        return redirect('/');
+    }
 }

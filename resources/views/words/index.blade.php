@@ -10,6 +10,11 @@
       <li>
         <a href="{{ action('WordsController@show', $word )}}">{{ $word->en }}</a>
         <a href="">{{ $word->ja }}</a>
+        <a href="#" class="del" data-id="{{ $word->id }}">[×]</a>
+        <form method="post" action="{{ url('/words', $word->id) }}" id="form_{{ $word->id }}">
+          {{ csrf_field() }}
+          {{ method_field('delete') }}
+        </form>
       </li>
       @endforeach
     </ul>
