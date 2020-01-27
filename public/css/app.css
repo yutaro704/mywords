@@ -11373,6 +11373,59 @@ h1 {
   border-bottom: 1px solid #ddd;
 }
 
+.words {
+  height: 200px;
+  width: 600px;
+  font-size: 30px;
+}
+
+.words .word {
+  height: 300px;
+  width: 800px;
+  color: black;
+  background-color: #ddd;
+  margin-bottom: 50px;
+  list-style: none;
+  position: relative;
+}
+
+.words .word .en {
+  margin-left: 20px;
+}
+
+.words .word .etranslation {
+  background-color: #564c46;
+  color: #fff;
+  font-size: 15px;
+  margin: 0 5px 0 15px;
+  padding: 3px 5px;
+}
+
+.words .word .partofspeech {
+  background-color: #564c46;
+  color: #fff;
+  font-size: 15px;
+  margin: 0 5px 0 15px;
+  padding: 3px 5px;
+}
+
+.words .word .ja {
+  font-size: 20px;
+}
+
+.words .word .del {
+  height: 30px;
+  width: 120px;
+  text-align: center;
+  background-color: red;
+  border-radius: 4px;
+  color: white;
+  font-size: 15px;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+
 .header-menu {
   font-size: 20px;
   font-weight: normal;
