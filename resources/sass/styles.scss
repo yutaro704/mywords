@@ -1,15 +1,15 @@
-.container {
-  width: 400px;
-  margin: 20px auto;
+.header_logo{
+  font-size: 30px;
 }
 
-h1{
-  font-size: 16px;
-  padding-bottom: 35px;
-  margin-bottom: 15px;
-  border-bottom: 1px solid #ddd;
+.navbar-brand{
+  font-size: 15px;
+  font-style: bold;
 }
 
+.phrase{
+  margin-right: 150px;
+}
 .words{
   height: 100px;
   width: 600px;
@@ -28,45 +28,43 @@ h1{
       color: $black;
     }
     .etranslation{
-      @include button (#564c46);
+      @include btn_a (#564c46);
       margin: 0 5px 0 15px;
       padding: 3px 5px;
     }
     .partofspeech{
-      @include button (#564c46);
+      @include btn_a (#564c46);
       margin: 0 5px 0 15px;
       padding: 3px 5px;
     }
     .ja{
       font-size: 15px;
     }
-    .del{
-      @include button ($red);
-      position: absolute;
-      right: 20px;
-      top: 100px;
-    }
-    .show{
-      @include button ($red);
-      position: absolute;
-      right: 20px;
-      top:20px;
-    }
-    .edit{
-      @include button ($red);
-      position: absolute;
-      right: 20px;
-      top:60px;
+    .crud{
+      @include btn_b(25px, 70px);
+      margin:10px;
+      &_btn{
+        position: absolute;
+        font-size:18px;
+        top: -3px;
+        left: 15px
+      }
     }
   }
 }
 
-.header-menu {
+.add {
+  @include btn_b(50px,180px);
+  position: absolute;
+  right: 130px;
   font-size: 20px;
-  font-weight: normal;
-  float: right;
   padding-right: 20px;
   margin-bottom: 20px;
+  &_word{
+    position: absolute;
+    top:7px;
+    left: 40px;
+  }
 }
 
 input[type="text"]{

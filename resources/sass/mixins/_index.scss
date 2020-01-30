@@ -1,4 +1,4 @@
-@mixin button ($color){
+@mixin btn_a ($color){
   height: 30px;
   width: 120px;
   text-align: center;
@@ -6,4 +6,15 @@
   border-radius: 4px;
   color: white;
   font-size: 15px;
+}
+
+@mixin btn_b($height, $width){
+  position: relative;
+  height: $height;
+  width: $width;
+  right:50px;
+  font-weight: normal;
+  border: solid#3B90DC;
+  border-radius: 25px 25px;
+  float: right;
 }
