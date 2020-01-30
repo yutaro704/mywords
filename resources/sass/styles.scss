@@ -1,0 +1,74 @@
+.header_logo{
+  font-size: 30px;
+}
+
+.navbar-brand{
+  font-size: 15px;
+  font-style: bold;
+}
+
+.phrase{
+  margin-right: 150px;
+}
+.words{
+  height: 100px;
+  width: 600px;
+  font-size: 30px;
+  .word{
+    height: 150px;
+    width: 800px;
+    background-color: $white;
+    margin: 0 0 50px 25px;
+    border-radius: 25px 25px;
+    list-style: none;
+    position: relative;
+    .en{
+      font-size: 30px;
+      padding:15px;
+      color: $black;
+    }
+    .etranslation{
+      @include btn_a (#564c46);
+      margin: 0 5px 0 15px;
+      padding: 3px 5px;
+    }
+    .partofspeech{
+      @include btn_a (#564c46);
+      margin: 0 5px 0 15px;
+      padding: 3px 5px;
+    }
+    .ja{
+      font-size: 15px;
+    }
+    .crud{
+      @include btn_b(25px, 70px);
+      margin:10px;
+      &_btn{
+        position: absolute;
+        font-size:18px;
+        top: -3px;
+        left: 15px
+      }
+    }
+  }
+}
+
+.add {
+  @include btn_b(50px,180px);
+  position: absolute;
+  right: 130px;
+  font-size: 20px;
+  padding-right: 20px;
+  margin-bottom: 20px;
+  &_word{
+    position: absolute;
+    top:7px;
+    left: 40px;
+  }
+}
+
+input[type="text"]{
+  box-sizing: border-box;
+  width:400px;
+  padding:5px;
+}
