@@ -14,6 +14,9 @@
     <input type="text" name="ja" placeholder="enter japanese">
   </p>
   <p>
+    <input type="text" name="wordclass" placeholder="enter wordclass">
+  </p>
+  <p>
     <input type="submit" value="add word">
   </p>
 </form>
