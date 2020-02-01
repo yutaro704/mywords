@@ -21,7 +21,7 @@
         <b class="etranslation">和訳</b>
           {{ $word->ja }}
         <b class="partofspeech">品詞</b>
-          <!-- {{ $word->ja }} -->
+          {{ $word->wordclass }}
       </li>
       @endforeach
     </ul>
