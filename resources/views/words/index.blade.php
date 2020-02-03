@@ -17,11 +17,16 @@
           {{ csrf_field() }}
           {{ method_field('delete') }}
         </form>
-      <div class="en">{{ $word->en }}</div>
+      <div class="en">
+        <a href="{{ action('WordsController@show', $word )}}" class="show">{{ $word->en }}</a>
+      </div>
         <b class="etranslation">和訳</b>
           {{ $word->ja }}
         <b class="partofspeech">品詞</b>
           {{ $word->wordclass }}
+        <b class="partofspeech">投稿者</b>
+        {{ Auth::user()->name }}
+        <b class="partofspeech">フラグ</b>
       </li>
       @endforeach
     </ul>
