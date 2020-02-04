@@ -11369,19 +11369,14 @@ a.text-dark:focus {
   margin-right: 150px;
 }
 
-.words {
-  height: 100px;
-  width: 600px;
-  font-size: 30px;
-}
-
 .words .word {
+  font-size: 30px;
   height: 150px;
   width: 800px;
   background-color: #FFFFFF;
-  margin: 0 0 50px 25px;
   border-radius: 25px 25px;
   list-style: none;
+  margin: 30px auto;
   position: relative;
 }
 
@@ -11448,10 +11443,8 @@ a.text-dark:focus {
   border-radius: 25px 25px;
   float: right;
   position: absolute;
-  right: 130px;
+  right: 50px;
   font-size: 20px;
-  padding-right: 20px;
-  margin-bottom: 20px;
 }
 
 .add_word {
