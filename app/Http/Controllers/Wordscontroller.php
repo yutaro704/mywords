@@ -24,10 +24,12 @@ class WordsController extends Controller
     public function edit(Word $word){
         return view('words.edit')->with('word', $word);
     }
+    
     public function store(Request $request) {
         $word = new Word();
         $word->en = $request->en;
         $word->ja = $request->ja;
+        $word->wordclass = $request->wordclass;
         $word->user_id = auth()->id();
         $word->save();
         return redirect('/');

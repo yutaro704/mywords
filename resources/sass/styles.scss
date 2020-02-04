@@ -11,16 +11,14 @@
   margin-right: 150px;
 }
 .words{
-  height: 100px;
-  width: 600px;
-  font-size: 30px;
   .word{
+    font-size: 30px;
     height: 150px;
     width: 800px;
     background-color: $white;
-    margin: 0 0 50px 25px;
     border-radius: 25px 25px;
     list-style: none;
+    margin: 30px auto;
     position: relative;
     .en{
       font-size: 30px;
@@ -56,10 +54,8 @@
 .add {
   @include btn_b(50px,180px);
   position: absolute;
-  right: 130px;
+  right: 50px;
   font-size: 20px;
-  padding-right: 20px;
-  margin-bottom: 20px;
   &_word{
     position: absolute;
     top:7px;
