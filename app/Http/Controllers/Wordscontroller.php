@@ -27,7 +27,7 @@ class WordsController extends Controller
     
     public function store(Request $request) {
         $word = new Word();
-        $word->en = $request->en;
+        $word->title = $request->title;
         $word->ja = $request->ja;
         $word->wordclass = $request->wordclass;
         $word->user_id = auth()->id();
