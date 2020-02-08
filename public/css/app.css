@@ -11380,10 +11380,14 @@ a.text-dark:focus {
   position: relative;
 }
 
-.words .word .en {
+.words .word .titlequestion {
   font-size: 30px;
   padding: 15px;
   color: #212121;
+}
+
+.words .word .contentquestion {
+  font-size: 15px;
 }
 
 .words .word .etranslation {
@@ -11408,6 +11412,10 @@ a.text-dark:focus {
   font-size: 15px;
   margin: 0 5px 0 15px;
   padding: 3px 5px;
+}
+
+.words .word .contributorquestion {
+  font-size: 20px;
 }
 
 .words .word .ja {
