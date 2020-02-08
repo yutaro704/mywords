@@ -20,10 +20,13 @@
     list-style: none;
     margin: 30px auto;
     position: relative;
-    .en{
+    .titlequestion{
       font-size: 30px;
       padding:15px;
       color: $black;
+    }
+    .contentquestion{
+      font-size: 15px;
     }
     .etranslation{
       @include btn_a (#564c46);
@@ -34,6 +37,9 @@
       @include btn_a (#564c46);
       margin: 0 5px 0 15px;
       padding: 3px 5px;
+    }
+    .contributorquestion{
+      font-size: 20px;
     }
     .ja{
       font-size: 15px;

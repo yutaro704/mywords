@@ -14,16 +14,17 @@
           {{ csrf_field() }}
           {{ method_field('delete') }}
         </form>
-      <div class="en">
-        {{ $word->en }}
+      <div class="titlequestion">
+        {{ $word->title }}
       </div>
-        <b class="etranslation">和訳</b>
-          {{ $word->ja }}
-        <b class="partofspeech">品詞</b>
-          {{ $word->wordclass }}
+      <div class="contentquestion">
+        <b class="etranslation">内容</b>
+          {{ $word->body }}
+      </div>
+      <div class="contributorquestion">
         <b class="partofspeech">投稿者</b>
         {{ Auth::user()->name }}
-        <b class="partofspeech">フラグ</b>
+      </div>
       </li>
 </ul>
   <a href="{{url('/')}}" class="header-menu" >Back</a>
