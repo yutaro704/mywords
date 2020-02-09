@@ -11,8 +11,7 @@
         <a href="{{ action('WordsController@show', $word )}}" class="show">{{ $word->title }}</a>
       </div>
       <b class="partofspeech">投稿者</b>
-        {{ Auth::user()->name }}
-        <!-- ↑ログインしている状態のユーザーの表示をするように設定してあるので、投稿ユーザーがログインしていない状態だとトップページがエラーになる。 -->
+      {{ $word->user->name }}さん
       </li>
       @endforeach
     </ul>
