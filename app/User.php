@@ -40,4 +40,7 @@ class User extends Authenticatable
     public function words() {
         return $this->hasMany('App\Word');
     }
+    public function comments() {
+        return $this->hasMany('App\Comment');
+    }
 }
