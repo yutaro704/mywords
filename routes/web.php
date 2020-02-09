@@ -19,7 +19,7 @@ Route::get('/words/{word}/edit', 'WordsController@edit');
 Route::patch('/words/{word}', 'WordsController@update');
 Route::delete('/words/{word}', 'WordsController@destroy');
 Route::post('/words/{word}/comments', 'CommentsController@store');
-
+Route::delete('/words/{word}/comments/{comment}', 'CommentsController@destroy');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
