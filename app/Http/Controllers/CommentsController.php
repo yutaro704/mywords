@@ -19,4 +19,9 @@ class CommentsController extends Controller
         return redirect()->action('WordsController@show', $word);
       }
     
+    public function destroy(Word $word, Comment $comment){
+        $comment->delete();
+        return redirect()->back();
+    }
+    
 }
