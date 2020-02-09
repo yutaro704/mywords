@@ -8,10 +8,10 @@
 <form method='post' action="{{ url('/words') }}">
   {{ csrf_field() }}
   <p>
-    <input type="text" name="title" placeholder="enter english">
+    <input type="text" name="title" placeholder="質問のタイトルをつけてみよう">
   </p>
   <p>
-    <input type="text" name="ja" placeholder="enter japanese">
+    <input type="text" name="body" placeholder="質問の詳細を書いてみよう">
   </p>
   <p>
     <input type="text" name="wordclass" placeholder="enter wordclass">
