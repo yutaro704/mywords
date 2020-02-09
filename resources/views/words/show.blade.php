@@ -27,5 +27,29 @@
       </div>
       </li>
 </ul>
+
+<h2>回答</h2>
+<ul>
+  @forelse ($word->comments as $comment)
+  <li>
+    {{ $comment->body }}
+    {{ $comment->user->name }}
+  </li>
+  @empty
+  <li>まだ回答はありません</li>
+  @endforelse
+</ul>
+<form method="post" action="{{ action('CommentsController@store', $word) }}">
+  {{ csrf_field() }}
+  <p>
+    <input type="text" name="body" placeholder="コメントする" value="{{ old('body') }}">
+    @if ($errors->has('body'))
+    <span class="error">{{ $errors->first('body') }}</span>
+    @endif
+  </p>
+  <p>
+    <input type="submit" value="Add Comment">
+  </p>
+</form>
   <a href="{{url('/')}}" class="header-menu" >Back</a>
 @endsection
