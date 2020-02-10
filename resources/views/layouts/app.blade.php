@@ -27,7 +27,7 @@
                     Mywords
                 </a>
                 <a class= "phrase">
-                    あなたのわからない単語をわかるにしよう・マイワーズ
+                    ネイティブから英語を学ぼう・マイワーズ
                 </a>
                 <a class= "navbar-brand" href="{{ url('/') }}">
                     トップページ
