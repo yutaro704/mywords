@@ -1,3 +1,4 @@
+// index
 // ヘッダー
 
 .header_logo{
@@ -12,53 +13,51 @@
 .phrase{
   margin-right: 150px;
 }
-.words{
-  .word{
-    font-size: 30px;
-    height: 300px;
-    width: 800px;
-    background-color: $white;
-    border-radius: 25px 25px;
-    list-style: none;
-    margin: 30px auto;
-    position: relative;
-    .titlequestion{
-      font-size: 30px;
-      padding:15px;
-      color: $black;
-    }
-    .contentquestion{
-      font-size: 15px;
-    }
-    .etranslation{
-      @include btn_a (#564c46);
-      margin: 0 5px 0 15px;
-      padding: 3px 5px;
-    }
-    .partofspeech{
-      @include btn_a (#564c46);
-      margin: 0 5px 0 15px;
-      padding: 3px 5px;
-    }
-    .contributorquestion{
+.index{
+  &_words{
+    &--post{
       font-size: 20px;
-    }
-    .ja{
-      font-size: 15px;
-    }
-    .crud{
-      @include btn_b(25px, 70px);
-      margin:10px;
-      &_btn{
-        position: absolute;
-        font-size:18px;
-        top: -3px;
-        left: 15px
+      height: 100px;
+      width: 800px;
+      background-color: $white;
+      border-radius: 25px 25px;
+      list-style: none;
+      margin: 30px auto;
+      position: relative;
+      .title{
+        font-size: 20px;
+        padding:10px;
+        color: $black;
+      }
+      .contentquestion{
+        font-size: 15px;
+      }
+      .etranslation{
+        @include btn_a (#564c46);
+        margin: 0 5px 0 15px;
+        padding: 3px 5px;
+      }
+      .partofspeech{
+        @include btn_a (#564c46);
+        margin: 0 5px 0 15px;
+        padding: 3px 5px;
+      }
+      .contributorquestion{
+        font-size: 20px;
+      }
+      .crud{
+        @include btn_b(25px, 70px);
+        margin:10px;
+        &_btn{
+          position: absolute;
+          font-size:18px;
+          top: -3px;
+          left: 15px
+        }
       }
     }
   }
 }
-
 // メインコンテンツ
 
 .top_pic{
@@ -104,4 +103,52 @@ input[type="text"]{
   box-sizing: border-box;
   width:400px;
   padding:5px;
+}
+
+// show
+.words{
+  .word{
+    font-size: 30px;
+    height: 300px;
+    width: 800px;
+    background-color: $white;
+    border-radius: 25px 25px;
+    list-style: none;
+    margin: 30px auto;
+    position: relative;
+    .titlequestion{
+      font-size: 30px;
+      padding:15px;
+      color: $black;
+    }
+    .contentquestion{
+      font-size: 15px;
+    }
+    .etranslation{
+      @include btn_a (#564c46);
+      margin: 0 5px 0 15px;
+      padding: 3px 5px;
+    }
+    .partofspeech{
+      @include btn_a (#564c46);
+      margin: 0 5px 0 15px;
+      padding: 3px 5px;
+    }
+    .contributorquestion{
+      font-size: 20px;
+    }
+    .ja{
+      font-size: 15px;
+    }
+    .crud{
+      @include btn_b(25px, 70px);
+      margin:10px;
+      &_btn{
+        position: absolute;
+        font-size:18px;
+        top: -3px;
+        left: 15px
+      }
+    }
+  }
 }
