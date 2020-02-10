@@ -28,7 +28,10 @@
       </li>
 </ul>
 
-<h2>回答</h2>
+<!-- コメント -->
+<div class="titlequestion">
+  回答
+</div>
 <ul>
   @forelse ($word->comments as $comment)
   <li>
