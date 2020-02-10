@@ -13,17 +13,22 @@
     丘の上からの街の眺めが有名で、街歩きをすることで色々満喫つできる街です。
   </div>
 </div>
+<!-- 質問する -->
 <div class=add>
   <a href="{{url('/words/create')}}" class="add_word" >質問する</a>
 </div>
-    <ul class="words">
+<!-- メインコンテンツ -->
+  <div class="index">
+    <ul class="index_words">
       @foreach($words as $word)
-      <li class="word">
-      <div class="titlequestion">
-        <a href="{{ action('WordsController@show', $word )}}" class="show">{{ $word->title }}</a>
-      </div>
-      <b class="partofspeech">投稿者</b>
-      {{ $word->user->name }}さん
+      <li class="index_words--post">
+        <div class="title">
+          <a href="{{ action('WordsController@show', $word )}}" class="show">{{ $word->title }}</a>
+        </div>
+        <div>
+          <b class="partofspeech">投稿者</b>
+          {{ $word->user->name }}さん
+        </div>
       </li>
       @endforeach
     </ul>
