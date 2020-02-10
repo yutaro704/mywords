@@ -1,6 +1,6 @@
 // index
-// ヘッダー
 
+// ヘッダー
 .header_logo{
   font-size: 30px;
 }
@@ -13,6 +13,37 @@
 .phrase{
   margin-right: 150px;
 }
+
+// コンテンツ
+
+// トップ画像
+.top_pic{
+  position: relative;
+  &__logo{
+    width: 100%;
+  }
+  &__title{
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    position: absolute;
+    top:300px;
+    left: 20px;
+    height: 30px;
+    width: 400px;
+  }
+  &__text{
+    font-size: 15px;
+    color: white;
+    position: absolute;
+    top:340px;
+    left: 20px;
+    height: 120px;
+    width: 400px;
+  }
+}
+
+// 質問
 .index{
   &_words{
     &--post{
@@ -58,34 +89,8 @@
     }
   }
 }
-// メインコンテンツ
 
-.top_pic{
-  position: relative;
-  &__logo{
-    width: 100%;
-  }
-  &__title{
-    font-size: 20px;
-    font-weight: bold;
-    color: white;
-    position: absolute;
-    top:300px;
-    left: 20px;
-    height: 30px;
-    width: 400px;
-  }
-  &__text{
-    font-size: 15px;
-    color: white;
-    position: absolute;
-    top:340px;
-    left: 20px;
-    height: 120px;
-    width: 400px;
-  }
-}
-
+// 質問ボタン
 .add {
   @include btn_b(50px,180px);
   position: absolute;
@@ -106,48 +111,147 @@ input[type="text"]{
 }
 
 // show
-.words{
-  .word{
-    font-size: 30px;
-    height: 300px;
-    width: 800px;
-    background-color: $white;
-    border-radius: 25px 25px;
-    list-style: none;
-    margin: 30px auto;
-    position: relative;
-    .titlequestion{
+
+// 質問内容
+.show{
+  &_words{
+    &--post{
       font-size: 30px;
-      padding:15px;
-      color: $black;
+      height: 400px;
+      width: 800px;
+      background-color: $white;
+      border-radius: 25px 25px;
+      list-style: none;
+      margin: 30px auto;
+      position: relative;
+        .title{
+          font-size: 30px;
+          padding:15px;
+          color: $black;
+        }
+        .content{
+          .text{
+            font-size: 15px;
+            height: 150px;
+            width: 700px;
+            margin: 0 auto;
+          }
+          .etranslation{
+            @include btn_a (#564c46);
+            margin: 0 5px 0 15px;
+            padding: 3px 5px;
+          }
+          .partofspeech{
+            @include btn_a (#564c46);
+            margin: 0 5px 0 15px;
+            padding: 3px 5px;
+          }
+          .contributorquestion{
+            font-size: 20px;
+          }
+          .ja{
+            font-size: 15px;
+          }
+          .crud{
+            @include btn_b(25px, 70px);
+            margin:10px;
+            &_btn{
+              position: absolute;
+              font-size:18px;
+              top: -3px;
+              left: 15px
+            }
+          }
+      }
     }
-    .contentquestion{
+  }
+}
+
+// コメント
+.comments{
+  &_words{
+    &--yes{
+      .answers{
+        @include btn_a (#3B90DC);
+        padding: 3px 5px;
+        
+      }
+      .crud{
+        @include btn_b(25px, 70px);
+        margin:10px;
+        &_btn{
+          position: absolute;
+          font-size:18px;
+          top: -3px;
+          left: 15px
+        }
+      }
+      .partofspeech{
+        @include btn_a (#564c46);
+        margin: 0 5px 0 15px;
+        padding: 3px 5px;
+      }
+      .contributorquestion{
+        font-size: 20px;
+      }
+      .etranslation{
+        @include btn_a (#564c46);
+        margin: 0 5px 0 15px;
+        padding: 3px 5px;
+      }
+      font-size: 30px;
+      height: 400px;
+      width: 800px;
+      background-color: $white;
+      border-radius: 25px 25px;
+      list-style: none;
+      margin: 30px auto;
+    }
+    .text{
       font-size: 15px;
+      height: 150px;
+      width: 700px;
+      margin: 0 auto;
     }
-    .etranslation{
-      @include btn_a (#564c46);
-      margin: 0 5px 0 15px;
-      padding: 3px 5px;
+    &--no{
+      .answers{
+        @include btn_a (red);
+        margin: 0 5px 0 15px;
+        padding: 3px 5px;
+      }
+      font-size: 30px;
+      height: 400px;
+      width: 800px;
+      background-color: $white;
+      border-radius: 25px 25px;
+      list-style: none;
+      margin: 30px auto;
+      position: relative;
     }
-    .partofspeech{
-      @include btn_a (#564c46);
-      margin: 0 5px 0 15px;
-      padding: 3px 5px;
-    }
-    .contributorquestion{
-      font-size: 20px;
-    }
-    .ja{
-      font-size: 15px;
-    }
-    .crud{
-      @include btn_b(25px, 70px);
-      margin:10px;
-      &_btn{
+  }
+}
+
+// コメントのフォーム
+.comments{
+  &_form{
+    position: relative;
+    &__body{
+      position: absolute;
+      top: 50px; 
+      left: 300px;
+      &--text{
+        height: 100px;
+        width: 800px;
+        border-color: #AAAAAA;
+        border-radius: 5px 5px;
+      }
+      &--submit{
+        @include btn_b(50px,180px);
+        color: #3B90DC;
         position: absolute;
-        font-size:18px;
-        top: -3px;
-        left: 15px
+        font-size: 20px;
+        left: 300px;
+        top: 200px;
       }
     }
   }
