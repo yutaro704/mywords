@@ -29,7 +29,6 @@ class WordsController extends Controller
         $word = new Word();
         $word->title = $request->title;
         $word->body = $request->body;
-        $word->wordclass = $request->wordclass;
         $word->user_id = auth()->id();
         $word->save();
         return redirect('/');
