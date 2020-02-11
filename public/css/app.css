@@ -11670,6 +11670,13 @@ input[type=text] {
   padding: 3px 5px;
 }
 
+.create_title {
+  font-size: 30px;
+  height: 40px;
+  width: 120px;
+  margin: 0 auto 20px;
+}
+
 .comments_form {
   position: relative;
 }
@@ -11702,5 +11709,52 @@ input[type=text] {
   font-size: 20px;
   left: 300px;
   top: 200px;
+}
+
+.create {
+  height: 100%;
+  width: 500px;
+  position: relative;
+  margin: 0 auto;
+}
+
+.create_words__title {
+  width: 500px;
+}
+
+.create_words__title--input {
+  height: 50px;
+  width: 100%;
+}
+
+.create_words__body--textarea {
+  height: 200px;
+  width: 500px;
+}
+
+.create_words__wordclass--input {
+  height: 50px;
+  width: 100%;
+}
+
+.create_words__submit {
+  position: absolute;
+  top: 300px;
+  left: 350px;
+}
+
+.create_words__submit--input {
+  position: relative;
+  height: 50px;
+  width: 180px;
+  top: 15px;
+  right: 20px;
+  font-weight: normal;
+  border: solid #3B90DC;
+  border-radius: 25px 25px;
+  float: right;
+  color: #3B90DC;
+  position: absolute;
+  font-size: 20px;
 }
 
