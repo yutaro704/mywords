@@ -36,8 +36,8 @@ class WordsController extends Controller
     }
 
     public function update(Request $request, Word $word) {
-        $word->en = $request->en;
-        $word->ja = $request->ja;
+        $word->title = $request->title;
+        $word->body = $request->body;
         $word->user_id = auth()->id();
         $word->save();
         return redirect('/');

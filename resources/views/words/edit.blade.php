@@ -1,21 +1,21 @@
 @extends('layouts.app')
 @section('title', 'Edit word')
 @section('content')
-<h1>
-  Edit word
-  <a href="{{url('/')}}", class="header-menu" >Back</a>
+<h1 class="edit_title">
+  質問編集
 </h1>
-<form method='post', action="{{ url('/words', $word->id) }}">
+<div class="edit">
+<form class="edit_words" method='post', action="{{ url('/words', $word->id) }}">
   {{ csrf_field() }}
   {{ method_field('patch') }}
-  <p>
-    <input type="text" name="en" placeholder="enter english" value= "{{ old('en', $word->en)}}">
+  <p class="edit_words__title">
+    <input class="edit_words__title--input" type="text" style="width:500px;height:50px;" name="title" placeholder="質問の編集をしてみよう！" value= "{{ old('title', $word->title)}}">
   </p>
-  <p>
-    <input type="text" name="ja" placeholder="enter japanese" value= "{{ old('ja', $word->ja)}}">
+  <p class="edit_words__body">
+    <textarea class="edit_words__body--textarea" name="body" placeholder="質問の詳細を編集してみよう！" value= "{{ old('body', $word->body)}}"></textarea>
   </p>
-  <p>
-    <input type="submit" value="update">
+  <p class="edit_words__submit">
+    <input class="edit_words__submit--input" type="submit" value="更新する">
   </p>
 </form>
 @endsection 

@@ -1,3 +1,6 @@
+// index
+
+// ヘッダー
 .header_logo{
   font-size: 30px;
 }
@@ -10,62 +13,94 @@
 .phrase{
   margin-right: 150px;
 }
-.words{
-  .word{
-    font-size: 30px;
-    height: 150px;
-    width: 800px;
-    background-color: $white;
-    border-radius: 25px 25px;
-    list-style: none;
-    margin: 30px auto;
-    position: relative;
-    .titlequestion{
-      font-size: 30px;
-      padding:15px;
-      color: $black;
-    }
-    .contentquestion{
-      font-size: 15px;
-    }
-    .etranslation{
-      @include btn_a (#564c46);
-      margin: 0 5px 0 15px;
-      padding: 3px 5px;
-    }
-    .partofspeech{
-      @include btn_a (#564c46);
-      margin: 0 5px 0 15px;
-      padding: 3px 5px;
-    }
-    .contributorquestion{
+
+// コンテンツ
+
+// トップ画像
+.top_pic{
+  position: relative;
+  &__logo{
+    width: 100%;
+  }
+  &__title{
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    position: absolute;
+    top:300px;
+    left: 20px;
+    height: 30px;
+    width: 400px;
+  }
+  &__text{
+    font-size: 15px;
+    color: white;
+    position: absolute;
+    top:340px;
+    left: 20px;
+    height: 120px;
+    width: 400px;
+  }
+}
+
+// 質問
+.index{
+  &_words{
+    &--post{
       font-size: 20px;
-    }
-    .ja{
-      font-size: 15px;
-    }
-    .crud{
-      @include btn_b(25px, 70px);
-      margin:10px;
-      &_btn{
-        position: absolute;
-        font-size:18px;
-        top: -3px;
-        left: 15px
+      height: 100px;
+      width: 800px;
+      background-color: $white;
+      border-radius: 25px 25px;
+      list-style: none;
+      margin: 30px auto;
+      position: relative;
+      .title{
+        font-size: 20px;
+        padding:10px;
+        color: $black;
+      }
+      .contentquestion{
+        font-size: 15px;
+      }
+      .etranslation{
+        @include btn_a (#564c46);
+        margin: 0 5px 0 15px;
+        padding: 3px 5px;
+      }
+      .partofspeech{
+        @include btn_a (#564c46);
+        margin: 0 5px 0 15px;
+        padding: 3px 5px;
+      }
+      .contributorquestion{
+        font-size: 20px;
+      }
+      .crud{
+        @include btn_b(25px, 70px);
+        margin:10px;
+        &_btn{
+          position: absolute;
+          font-size:18px;
+          top: -3px;
+          left: 15px
+        }
       }
     }
   }
 }
 
+// 質問ボタン
 .add {
   @include btn_b(50px,180px);
   position: absolute;
+  top:500px;
   right: 50px;
   font-size: 20px;
   &_word{
     position: absolute;
     top:7px;
-    left: 40px;
+    left: 48px;
   }
 }
 
@@ -73,4 +108,239 @@ input[type="text"]{
   box-sizing: border-box;
   width:400px;
   padding:5px;
+}
+
+// show
+
+// 質問内容
+.show{
+  &_words{
+    &--post{
+      font-size: 30px;
+      height: 400px;
+      width: 800px;
+      background-color: $white;
+      border-radius: 25px 25px;
+      list-style: none;
+      margin: 30px auto;
+      position: relative;
+        .title{
+          font-size: 30px;
+          padding:15px;
+          color: $black;
+        }
+        .content{
+          .text{
+            font-size: 15px;
+            height: 150px;
+            width: 700px;
+            margin: 0 auto;
+          }
+          .etranslation{
+            @include btn_a (#564c46);
+            margin: 0 5px 0 15px;
+            padding: 3px 5px;
+          }
+          .partofspeech{
+            @include btn_a (#564c46);
+            margin: 0 5px 0 15px;
+            padding: 3px 5px;
+          }
+          .contributorquestion{
+            font-size: 20px;
+          }
+          .ja{
+            font-size: 15px;
+          }
+          .crud{
+            @include btn_b(25px, 70px);
+            margin:10px;
+            &_btn{
+              position: absolute;
+              font-size:18px;
+              top: -3px;
+              left: 15px
+            }
+          }
+      }
+    }
+  }
+}
+
+// コメント
+.comments{
+  &_words{
+    &--yes{
+      .answers{
+        @include btn_a (#3B90DC);
+        padding: 3px 5px;
+        
+      }
+      .crud{
+        @include btn_b(25px, 70px);
+        margin:10px;
+        &_btn{
+          position: absolute;
+          font-size:18px;
+          top: -3px;
+          left: 15px
+        }
+      }
+      .partofspeech{
+        @include btn_a (#564c46);
+        margin: 0 5px 0 15px;
+        padding: 3px 5px;
+      }
+      .contributorquestion{
+        font-size: 20px;
+      }
+      .etranslation{
+        @include btn_a (#564c46);
+        margin: 0 5px 0 15px;
+        padding: 3px 5px;
+      }
+      font-size: 30px;
+      height: 400px;
+      width: 800px;
+      background-color: $white;
+      border-radius: 25px 25px;
+      list-style: none;
+      margin: 30px auto;
+    }
+    .text{
+      font-size: 15px;
+      height: 150px;
+      width: 700px;
+      margin: 0 auto;
+    }
+    &--no{
+      .answers{
+        @include btn_a (red);
+        margin: 0 5px 0 15px;
+        padding: 3px 5px;
+      }
+      font-size: 30px;
+      height: 400px;
+      width: 800px;
+      background-color: $white;
+      border-radius: 25px 25px;
+      list-style: none;
+      margin: 30px auto;
+      position: relative;
+    }
+  }
+}
+
+// コメントのフォーム
+.comments{
+  &_form{
+    position: relative;
+    &__body{
+      position: absolute;
+      top: 50px; 
+      left: 300px;
+      &--text{
+        height: 100px;
+        width: 800px;
+        border-color: #AAAAAA;
+        border-radius: 5px 5px;
+      }
+      &--submit{
+        @include btn_b(50px,180px);
+        color: #3B90DC;
+        position: absolute;
+        font-size: 20px;
+        left: 300px;
+        top: 200px;
+      }
+    }
+  }
+}
+
+// create
+.create_title{
+  font-size: 30px;
+  height: 40px;
+  width: 120px;
+  margin: 0 auto 20px;
+}
+.create{
+  height: 100%;
+  width: 500px;
+  position: relative;
+  margin: 0 auto;
+  &_words{
+    &__title{
+      width: 500px;
+      &--input{
+        height: 50px;
+        width: 100%;
+      }
+    }
+    &__body{
+      &--textarea{
+        height: 200px;
+        width: 500px;
+      }
+    }
+    &__wordclass{
+      &--input{
+        height: 50px;
+        width: 100%;
+      }
+
+    }
+    &__submit{
+      position: absolute;
+      top: 300px; 
+      left: 350px;
+      &--input{
+        @include btn_b(50px,180px);
+        color: #3B90DC;
+        position: absolute;
+        font-size: 20px;
+      }
+    }
+  }
+}
+
+// edit
+.edit_title{
+  font-size: 30px;
+  height: 40px;
+  width: 120px;
+  margin: 0 auto 20px;
+}
+
+.edit{
+  height: 100%;
+  width: 500px;
+  position: relative;
+  margin: 0 auto;
+  &_words{
+    &__title{
+      width: 500px;
+      &--input{
+        height: 50px;
+        width: 100%;
+      }
+    }
+    &__body{
+      &--textarea{
+        height: 200px;
+        width: 500px;
+      }
+    }
+    &__submit{
+      position: absolute;
+      top: 300px; 
+      left: 350px;
+      &--input{
+        @include btn_b(50px,180px);
+        color: #3B90DC;
+        position: absolute;
+        font-size: 20px;
+      }
+    }
+  }
 }
