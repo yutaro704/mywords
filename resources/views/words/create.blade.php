@@ -14,9 +14,6 @@
     <p class="create_words__body">
       <textarea class="create_words__body--textarea" type="text" name="body" placeholder="質問の詳細を書いてみよう！"></textarea>
     </p>
-    <p class="create_words__wordclass">
-      <input class="create_words__wordclass--input" type="text" name="wordclass" placeholder="enter wordclass">
-    </p>
     <p class="create_words__submit">
       <input class="create_words__submit--input" type="submit" value="投稿する">
     </p>
