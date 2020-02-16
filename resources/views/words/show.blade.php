@@ -16,12 +16,17 @@
             <b class="partofspeech">投稿者</b>
             {{ $word->user->name }}
           </div>
-          <div class="crud">
-            <a href="{{ action('WordsController@edit', $word) }}" class='crud_btn'>編集</a>
-          </div>
-          <div class="crud">
-            <a href="#" data-id="{{ $word->id }}" class="crud_btn del" >削除</a>
-          </div>
+          @if(Auth::check())
+            <div class="crud">
+              <a href="{{ action('WordsController@edit', $word) }}" class='crud_btn'>編集</a>
+            </div>
+          @endif
+
+          @if(Auth::check())
+            <div class="crud">
+              <a href="#" data-id="{{ $word->id }}" class="crud_btn del" >削除</a>
+            </div>
+          @endif
             <form method="post" action="{{ url('/words', $word->id) }}" id="form_{{ $word->id }}">
             {{ csrf_field() }}
             {{ method_field('delete') }}
@@ -42,9 +47,11 @@
       <div class="answers">
       回答
       </div>
-      <div class="crud">
-        <a href="#" data-id="{{ $comment->id }}" class="crud_btn del" >削除</a>
-      </div>
+      @if(Auth::check())
+        <div class="crud">
+          <a href="#" data-id="{{ $comment->id }}" class="crud_btn del" >削除</a>
+        </div>
+      @endif
       <form method="post" action="{{ action('CommentsController@destroy', [$word, $comment]) }}" id="form_{{ $comment->id }}">
         {{ csrf_field() }}
         {{ method_field('delete') }}
@@ -68,8 +75,8 @@
 <div class="comments">
   <form class="comments_form" method="post" action="{{ action('CommentsController@store', $word) }}">
     {{ csrf_field() }}
-    <p class="comments_form__body">
-      <textarea class="comments_form__body--text" type="text" name="body" placeholder="回答してみる！" value="{{ old('body') }}"></textarea>
+    <p class="comments_form__body"> 
+    <textarea class="comments_form__body--text" type="text" name="body" placeholder="回答してみる！" value="{{ old('body') }}"></textarea>
       @if ($errors->has('body'))
       <span class="error">{{ $errors->first('body') }}</span>
       @endif
