@@ -10,8 +10,7 @@ class CommentsController extends Controller
 {
     public function store(Request $request, Word $word) {
         $this->validate($request, [
-          'body' => 'required'
-          
+          'body'=>'required|max:255'
         ]);
         $comment = new Comment(['body' => $request->body]);
         $comment->user_id = auth()->id();
