@@ -108,6 +108,7 @@ return [
     'body'=>'本文',
     'email'=>'メールアドレス',
     'password'=>'パスワード',
+    'g-recaptcha-response'=>'「私はロボットではありません」の選択'
     ],
 
 ];
