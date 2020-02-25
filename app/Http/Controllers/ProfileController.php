@@ -23,4 +23,11 @@ class ProfileController extends Controller
         }
         return view('profiles/index');
     }
+    
+    public function store(ProfileRequest $request)
+    {
+        $request->photo->storeAs('public/profile_images', Auth::id() . '.jpg');
+
+        return redirect('profiles')->with('success', '新しいプロフィールを登録しました');
+    }
 }
