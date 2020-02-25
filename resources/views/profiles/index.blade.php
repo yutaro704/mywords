@@ -1,15 +1,4 @@
-
-
-<form method="POST" action="/profiles" enctype="multipart/form-data" >
-    {{ csrf_field() }}
-    <input type="file" name="photo">
-    <input type="submit">
-</form>
-
-
-
 @extends('layouts.app')
-
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
