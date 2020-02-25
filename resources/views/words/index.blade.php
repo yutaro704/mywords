@@ -27,6 +27,7 @@
         </div>
         <div>
           <b class="partofspeech">投稿者</b>
+            <img src="/storage/profile_images/{{ $word->user->id }}.jpg" width="40px" height="40px">
           {{ $word->user->name }}さん
         </div>
       </li>
