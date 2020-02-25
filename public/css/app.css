@@ -11813,3 +11813,13 @@ a.text-dark:focus {
   margin-bottom: 15px;
 }
 
+.card-body {
+  position: relative;
+}
+
+.card-body .profile {
+  position: absolute;
+  height: 180px;
+  width: 300px;
+}
+

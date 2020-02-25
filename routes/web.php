@@ -21,5 +21,9 @@ Route::delete('/words/{word}', 'WordsController@destroy');
 Route::post('/words/{word}/comments', 'CommentsController@store');
 Route::delete('/words/{word}/comments/{comment}', 'CommentsController@destroy');
 Auth::routes();
+Route::group(['middleware'=>'auth'],function(){
+  Route::get('/profiles', 'ProfileController@index');
+  Route::post('/profiles', 'ProfileController@store');
+});
 
 Route::get('/home', 'HomeController@index')->name('home');
