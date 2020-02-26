@@ -13,13 +13,13 @@
 
 Route::get('/', 'Wordscontroller@index');
 Route::get('/words/{word}', 'WordsController@show')->where('word','[0-9]+');
-Route::get('/words/create', 'WordsController@create');
-Route::post('/words', 'WordsController@store');
-Route::get('/words/{word}/edit', 'WordsController@edit');
-Route::patch('/words/{word}', 'WordsController@update');
-Route::delete('/words/{word}', 'WordsController@destroy');
-Route::post('/words/{word}/comments', 'CommentsController@store');
-Route::delete('/words/{word}/comments/{comment}', 'CommentsController@destroy');
+Route::get('/words/create', 'WordsController@create')->middleware('auth');
+Route::post('/words', 'WordsController@store')->middleware('auth');
+Route::get('/words/{word}/edit', 'WordsController@edit')->middleware('auth');
+Route::patch('/words/{word}', 'WordsController@update')->middleware('auth');
+Route::delete('/words/{word}', 'WordsController@destroy')->middleware('auth');
+Route::post('/words/{word}/comments', 'CommentsController@store')->middleware('auth');
+Route::delete('/words/{word}/comments/{comment}', 'CommentsController@destroy')->middleware('auth');
 Auth::routes();
 Route::group(['middleware'=>'auth'],function(){
   Route::get('/profiles', 'ProfileController@index');
