@@ -15,13 +15,14 @@ class ProfileController extends Controller
      * @return Response
      */
 
-    public function index(){
+    public function index(Auth $auth){
+        $auth = Auth::user();
         $image = false;
         
         if (Storage::disk('local')->exists('public/profile_images/' . Auth::id() . '.jpg')) {
             $image = true;
         }
-        return view('profiles/index');
+        return view('profiles/index')->with('auth', $auth);
     }
     
     public function store(ProfileRequest $request)
