@@ -8,34 +8,35 @@
                 <div class="card-header">{{ __('プロフィール編集') }}</div>
 
                 <div class="card-body">
-                    <form method="POST" action="{{ route('register') }}">
+                    <form method="POST" action="/profiles" enctype="multipart/form-data">
                         @csrf
 
                         <div class="form-group row">
                             <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('ニックネーム') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
-
+                        <div class="col-md-6">
+                                <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name', $auth->name) }}" required autocomplete="name" autofocus>
                                 @error('ニックネーム')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
                                 @enderror
                             </div>
-                        </div>
-                    </form>
-                        <div class="form-group row">
-                            <label for="password-confirm" class="col-md-4 col-form-label text-md-right">{{ __('プロフィール画像') }}</label>
+                            </div>
+                            <!-- プロフィール画像 -->
+                            <div class="form-group row">
+                                <label for="password-confirm" class="col-md-4 col-form-label text-md-right">{{ __('プロフィール画像') }}</label>
 
                             <div class="col-md-6">
-                                <form method="POST" action="/profiles" enctype="multipart/form-data" >
                                     {{ csrf_field() }}
                                 <input type="file" name="photo">
-                                <input type="submit">
-                                </form>
                             </div>
-                        </div>
+                            </div>
+
+                        <p class="edit_words__submit">
+                            <input class="edit_words__submit--input" type="submit" value="変更する">
+                        </p>
+
+                    </form>
                         @if ($errors->any())
                             <div class="alert alert-danger">
                                 <ul>
