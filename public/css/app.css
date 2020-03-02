@@ -11819,7 +11819,9 @@ a.text-dark:focus {
 
 .card-body .profile {
   position: absolute;
-  height: 180px;
-  width: 300px;
+  height: 100px;
+  width: 100px;
+  top: 20px;
+  left: 10px;
 }
 
