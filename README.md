@@ -1,4 +1,4 @@
-# mywords
+# Mywords　色々な世界の英語を学ぼう
 ![スクリーンショット 2020-03-02 午後11 32 56](https://user-images.githubusercontent.com/53216438/75685707-57937c80-5cde-11ea-9c59-cf786c9dab89.png)
 # 本アプリ概要
 ネイティブ英語を共有するソーシャルアプリです。
