@@ -7,12 +7,12 @@
 http://52.194.99.64/
  
 # 開発環境
-フロントエンド： Blade、 Sass、 Bootstrap4 、jQuery（削除機能）
+フロントエンド： Blade、 Sass、 Bootstrap4 、jQuery（削除機能)  
 バックエンド： Laravel 6.11.0  
-ライブラリ：　laravel/ui
-インフラ：　AWS（EC2） S3(プロフィール画像保存)
-Webサーバ： Apache 　　
-DB： MySQL 5.6.43
+ライブラリ：　laravel/ui  
+インフラ：　AWS（EC2） S3(プロフィール画像保存)  　
+Webサーバ： Apache  　　　
+DB： MySQL 5.6.43  
 API： reCAPTCHA V2
  
 # 機能
