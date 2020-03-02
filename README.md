@@ -25,12 +25,24 @@ API： reCAPTCHA V2
 プロフィール画像編集機能(画像の変更が可能）  
 
 # プレビュー
-質問一覧
+質問一覧  
+![スクリーンショット 2020-03-02 午後11 33 30](https://user-images.githubusercontent.com/53216438/75686617-e5bc3280-5cdf-11ea-93a8-f4daa92fc419.png)
+
 質問投稿
-質問詳細
-回答投稿
-ユーザー新規登録,reCAPTCHA V2
-プロフィール画像変更画面
+![スクリーンショット 2020-03-02 午後11 46 11](https://user-images.githubusercontent.com/53216438/75686991-7266f080-5ce0-11ea-9bc1-cddaec4c1449.png)
+
+質問詳細 
+![スクリーンショット 2020-03-02 午後11 49 07](https://user-images.githubusercontent.com/53216438/75687015-7dba1c00-5ce0-11ea-9693-8838588bb0c8.png)
+
+回答投稿  
+![スクリーンショット 2020-03-02 午後11 50 19](https://user-images.githubusercontent.com/53216438/75687079-97f3fa00-5ce0-11ea-84c8-6150daaadf56.png)
+
+ユーザー新規登録,reCAPTCHA V2  
+![スクリーンショット 2020-03-02 午後11 33 13](https://user-images.githubusercontent.com/53216438/75686566-cfae7200-5cdf-11ea-8e87-c6ecee83bba2.png)
+
+プロフィール画像変更画面  
+![スクリーンショット 2020-03-02 午後11 51 33](https://user-images.githubusercontent.com/53216438/75687225-cd98e300-5ce0-11ea-9a79-72f6bb4581de.png)
+
 
 # 作者
  浅野祐太郎
